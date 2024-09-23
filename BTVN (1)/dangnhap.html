@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang DDăng nhập</title>
+    <style>
+        .a{
+            margin-top: -30px;
+            margin-bottom: 10px;
+        }
+        .a1{
+            margin-top: -200px;
+        }
+        body{
+             margin: 0;
+            text-align: center;
+            width: auto;
+        }
+        .container{
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+        #hero{
+            /* background-color: aqua;*/
+            padding: 50px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+        #hero::before{
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(241, 157, 230);
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-3deg);
+            transform-origin: left bottom; 
+        }
+    </style>
+</head>
+<body >
+    <div id="wrapper">
+        <div id="header">
+            <div class="container">
+                
+            </div>
+        </div>
+        <div id="content">
+            <div id="hero">
+                <div class="container">
+                    <h1> Trang Đăng Nhập</h1>
+                    <label for="dang nhap"> <h3>Đăng nhập với email </h3></label>
+                    <p></p>
+                    <br>
+                    <input class="a" style="padding: 8px;" id="dang nhap" placeholder="email" type="text">
+                    <button id="aa"> ẩn / hiện </button>
+                    <br>
+                    <input style="padding: 8px;" id="Tai khoan" placeholder="Mật khẩu" type="password">
+                    <button id="aaa"> ẩn / hiện </button>
+                    <p></p>
+                    <br>
+                    <button class="a" type="submit" style="background-color: dimgrey; padding-left: 30px; padding-right: 30px;"> Đăng nhập</button>
+                    <p></p>
+                    <br>
+                    <a class="a1" href="" style="text-decoration: none; color: rgb(212, 145, 45);" >Lấy lại mật khẩu</a> 
+                    <script>
+                        var Tai_khoan = document.getElementById("Tai khoan");
+                        var aaa = document.getElementById("aaa");
+                        aaa.addEventListener("click", function () {
+                        Tai_khoan.setAttribute('type', Tai_khoan.getAttribute('type') === 'password' ? 'text' : 'password');
+                            setTimeout(function () {
+                                console.log('Sau 5s');
+                                
+                                Tai_khoan.setAttribute('type', 'password');
+                            }, 1000)
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
